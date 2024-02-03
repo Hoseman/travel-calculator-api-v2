@@ -85,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $vehicle_rate = $_POST['vehicle_rate'];
 
-    // Tp make things simple, the calculations DO NOT include a return journey
+    // To make things simple, the calculations DO NOT include a return journey
 
     // Therefore we need to calculate 3 travel point as follows:
     // 1. startPoint to pointTwo
