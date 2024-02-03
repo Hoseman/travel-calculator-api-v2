@@ -1,0 +1,258 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.form {
+    padding: 30px;
+    background-color: rgba(34, 52, 101, 0.8);
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media only screen and (max-width: 550px) {
+    .form {
+        padding: 22px;
+    }
+}
+.form__input {
+    margin-bottom:10px;
+    padding: 14px;
+    border-radius: 3px;
+    border: 0;
+    width: 96%;
+}
+@media only screen and (max-width: 1600px) {
+    .form__input {
+        width: 94.5%;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .form__input {
+        width: 92.5%;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .form__input {
+        width: 91.5%;
+    }
+}
+.form__select {
+    margin-bottom: 30px;
+}
+.form__heading {
+    font-size: 26px;
+    color: white;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+.form__validation {
+    color: orange;
+}
+.form__label {
+     color: white;
+     margin-bottom: 5px;
+     display: block;
+}
+.form__select {
+    border: 0;
+    border-radius: 3px;
+    padding: 12px 8px;
+    width: 300px;
+}
+@media only screen and (max-width: 550px) {
+    .form__select {
+        width: 100%;
+    }
+}
+.form__button {
+    background: rgba(172,203,65, 1.0);
+    color: white;
+    padding: 10px 30px;
+    border: 0;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.form__column {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 0 16px 0;
+    position: relative;
+}
+.form__col {
+    width: 50%;
+    padding-right: 0%;
+}
+@media only screen and (max-width: 800px) {
+    .form__col {
+        width: 100%;
+    }
+}
+.form__exchange-icon {
+    position: absolute;
+    left: 48.9%;
+    top: 33px;
+    background: rgba(172,203,65, 1.0);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-size: 17px;
+}
+@media only screen and (max-width: 1600px) {
+    .form__exchange-icon {
+        left: 48.6%;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .form__exchange-icon {
+        left: 48%;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .form__exchange-icon {
+        display: none;
+    }
+}
+.form__intro {
+    color: white;
+    opacity: 0.6;
+}
+.form__postcode {
+    padding: 0 10px 0 10px;
+}
+.result {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    background: rgba(172,203,65, 0.3);
+    margin-top: 10px;
+}
+.results__title {
+    color: black;
+    text-transform: uppercase;
+    margin: 10px 0 30px 0;
+}
+.results__total {
+    font-weight: bold;
+    margin-top: 30px;
+}
+.result__alt {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background: pink;
+    padding: 30px;
+    margin-top: 10px;
+}
+.itinerary {
+    position: relative;
+    width: auto;
+    border: 0px solid black;
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom:10px;
+}
+.itinerary__col {
+    width: 25%;
+    position: relative;
+}
+.itinerary__marker {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    margin-right: auto;
+    color: #666;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid white;
+    border-radius: 37px;
+    background: #dae3bb;
+    z-index: 10;
+    position: relative;
+}
+@media only screen and (max-width: 550px) {
+    .itinerary__marker {
+        width: 63px;
+        height: 63px;
+    }
+}
+.itinerary__col:nth-child(1) .itinerary__marker {
+    background: pink;
+}
+.itinerary__col:nth-child(4) .itinerary__marker {
+    background: pink;
+}
+.itinerary__col:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    right: 0;
+    top: 50%;
+    border-top: 2px dashed #d2d1d1;
+}
+.itinerary__col:nth-child(4)::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 50%;
+    top: 50%;
+    border-top: 2px dashed #d2d1d1;
+} 
+.itinerary__col:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    border-top: 2px dashed #d2d1d1;
+}
+.itinerary__col::after {
+    position: absolute;
+    content: "\f054";
+    /* width: 5px; */
+    font-family: 'Font Awesome 5 Free';
+    right: 0;
+    top: 50%;
+    font-weight: 900;
+    font-size: 17px;
+    color: #d2d1d1;
+    margin-top: -14px;
+    border: 6px solid white;
+    background: white;
+    border-left: 2px;
+}
+@media only screen and (max-width: 800px) {
+    .itinerary__col::after {
+        content: "";
+    }
+}
+.itinerary__col:nth-child(2):after {
+    color: #d2d1d1;
+}
+.itinerary__col:nth-child(3):after {
+    color: #d2d1d1;
+}
+.itinerary__col:nth-child(4):after {
+    content: "";
+    color: #d2d1d1;
+}
+.itinerary__text {
+    font-size: 11px;
+    margin: 2px 0 0 0;
+}
+@media only screen and (max-width: 550px) {
+    .itinerary__text {
+        font-size: 9.5px;
+    }
+}
+.itinerary__icon {
+    font-size: 20px;
+}
