@@ -15,28 +15,32 @@ body {
 }
 .form__input {
     margin-bottom:10px;
-    padding: 14px;
+    padding: 14px 3%;
     border-radius: 3px;
     border: 0;
-    width: 96%;
+    width: 93%;
 }
-@media only screen and (max-width: 1600px) {
+/* @media only screen and (max-width: 1600px) {
     .form__input {
         width: 94.5%;
     }
-}
-@media only screen and (max-width: 1200px) {
+} */
+/* @media only screen and (max-width: 1200px) {
     .form__input {
         width: 92.5%;
     }
-}
+} */
 @media only screen and (max-width: 1000px) {
     .form__input {
-        width: 91.5%;
+        width: 88%;
+        padding: 14px 5%;
     }
 }
 .form__select {
     margin-bottom: 30px;
+    -moz-appearance: none; 
+    -webkit-appearance: none; 
+    appearance: none;
 }
 .form__heading {
     font-size: 26px;
@@ -100,14 +104,14 @@ body {
 }
 @media only screen and (max-width: 1600px) {
     .form__exchange-icon {
-        left: 48.6%;
+        left: 48.35%;
     }
 }
 @media only screen and (max-width: 1200px) {
     .form__exchange-icon {
-        left: 48%;
+        left: 47.5%;
     }
-}
+} 
 @media only screen and (max-width: 800px) {
     .form__exchange-icon {
         display: none;

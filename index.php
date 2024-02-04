@@ -63,7 +63,7 @@
 
     <label class="form__label"><i class="fas fa-shuttle-van"></i> Vehicle Type <span class="form__validation">*</span></label>
     <select class="form__select" name="vehicle_rate">
-        <option>-- SELECT --</option>
+        <option value="null">-- SELECT --</option>
         <option value="1.5">Vehicle A</option>
         <option value="2.5">Vehicle B</option>
     </select>
@@ -104,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data2 = json_decode($response2, true);
     $data3 = json_decode($response3, true);
 
-    if ($data1['route'] && $data2['route'] && $data3['route']) {
+    if ($_POST['vehicle_rate']!="null" && $data1['route'] && $data2['route'] && $data3['route']) {
 
         // Grab the distance from each journey point
         $distance1 = $data1['route']['distance'];
@@ -115,6 +115,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $formattedTime1 = $data1['route']['formattedTime'];
         $formattedTime2 = $data2['route']['formattedTime'];
         $formattedTime3 = $data3['route']['formattedTime'];
+
 
         // Convert formatted time to minutes for each journey point
         list($hours, $minutes) = explode(':', $formattedTime1);
@@ -173,7 +174,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "<p>You are travelling from: $pointTwo</p>";
         echo "<p>You are travelling to: $pointThree</p>";
         echo "<p>Distance: $distance2 miles</p>";
-        echo "<p>Estimated Travel Time: $formattedTime1</p>";
+        echo "<p>Estimated Travel Time: $formattedTime2</p>";
         echo "<p>Vehicle: $vehicle_type</p>";
         echo "<p>Mileage Rate: £$rate2</p>";
         echo "<p>Hourly Rate: £$hourly_rate_2</p>";
